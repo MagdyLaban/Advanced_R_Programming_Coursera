@@ -1,0 +1,17 @@
+#Factorial of 10
+[1] 3628800
+Unit: microseconds
+                 expr     min       lq      mean  median        uq      max neval
+   Factorial_func(10)   7.896   8.6860 101.88780  11.054   20.9235 8074.771   100
+   Factorial_loop(10)  39.082  64.9385 288.14230  96.519  173.4965 7632.643   100
+ Factorial_reduce(10) 384.100 427.9180 984.34505 517.923 1063.0830 9260.624   100
+    Factorial_mem(10)   9.474  10.6595  95.27949  13.817   21.7125 7069.323   100
+
+#Factorial of 100
+[1] 9.332622e+157
+Unit: microseconds
+                  expr     min        lq      mean    median        uq      max neval
+   Factorial_func(100)  87.242   98.4930  237.8660  152.9695  271.0020 1264.015   100
+   Factorial_loop(100)  48.161   87.6370  216.9754  128.6920  205.4725 1882.601   100
+ Factorial_reduce(100) 851.494 1115.3885 1941.6879 1583.3740 2376.2450 8820.468   100
+    Factorial_mem(100)  99.874  107.7695  309.4514  177.0495  260.7380 2542.636   100

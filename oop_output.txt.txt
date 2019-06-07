@@ -1,0 +1,32 @@
+> x <- make_LD(data)
+> class(x)
+[1] "LongitudinalData"
+> 
+> print(x)
+[1] "Longitudinal dataset with 10 subjects"
+> output <- subject(x, 10)
+> print(output)
+NULL
+> output <- subject(x, 44)
+> print(output)
+[1] "Subject ID: 44"
+> output <- subject(x, 44) %>% summary
+> print(output)
+[1] "ID: 44"
+# A tibble: 3 x 3
+# Groups:   visit [3]
+  visit bedroom `living room`
+  <dbl>   <dbl>         <dbl>
+1     0    88.8          81.9
+2     1    39.3          41.4
+3     2    44.6          57.6
+> output <- subject(x, 44) %>% visit(0) %>% room("bedroom")
+> print(output)
+[1] "ID: 44"
+[1] "Visit: 0"
+[1] "Room: bedroom"
+> output <- subject(x, 44) %>% visit(0) %>% room("bedroom") %>% summary
+> print(output)
+[1] "ID: 44"
+   Min. 1st Qu.  Median    Mean 3rd Qu.    Max. 
+    8.0    30.0    51.0    88.8    80.0   911.0 
